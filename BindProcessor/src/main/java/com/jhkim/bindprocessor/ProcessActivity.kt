@@ -43,7 +43,7 @@ object ProcessActivity {
         //generate bindArgument method
         val listFilter = list.filter { !manager.checkBindArgument(it) }
         if (!listFilter.isNullOrEmpty()) {
-            val funcSpec2 = FunSpec.builder("bindExtra")
+            val funcSpec2 = FunSpec.builder("bindArgument")
                 .receiver(cls.type)
 
             funcSpec2.beginControlFlow("intent.extras?.let")
