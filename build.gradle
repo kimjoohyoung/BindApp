@@ -16,6 +16,8 @@ buildscript {
     }
 }
 
+group='com.github.bindlibrary'
+
 allprojects {
     repositories {
         google()
