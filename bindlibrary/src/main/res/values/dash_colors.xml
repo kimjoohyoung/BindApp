@@ -1,0 +1,83 @@
+<resources>
+
+
+    <string-array name="default_color_choice_values2" translatable="false">
+        <item>#4285F4</item>
+        <item>#aa66cc</item>
+        <item>#99cc00</item>
+        <item>#ffbb33</item>
+        <item>#ff4444</item>
+        <item>#3367D6</item>
+        <item>#9933cc</item>
+        <item>#669900</item>
+        <item>#ff8800</item>
+        <item>#cc0000</item>
+        <item>#ffffff</item>
+        <item>#eeeeee</item>
+        <item>#cccccc</item>
+        <item>#888888</item>
+        <item>#000000</item>
+    </string-array>
+
+    <string-array name="homescreen_color_choice_values" translatable="false">
+        <item>#ffffff</item>
+        <item>#000000</item>
+    </string-array>
+
+
+    <string-array name="default_color_choice_values" translatable="false">
+        <item>@color/material_red</item>
+        <item>@color/material_pink</item>
+        <item>@color/material_purple</item>
+        <item>@color/material_deep_purple</item>
+
+        <item>@color/material_indigo</item>
+        <item>@color/material_blue</item>
+        <item>@color/material_light_blue</item>
+        <item>@color/material_cyan</item>
+
+        <item>@color/material_teal</item>
+        <item>@color/material_green</item>
+        <item>@color/material_light_green</item>
+        <item>@color/material_lime</item>
+
+        <item>@color/material_yellow</item>
+        <item>@color/material_amber</item>
+        <item>@color/material_orange</item>
+        <item>@color/material_deep_orange</item>
+
+        <item>@color/material_brown</item>
+        <item>@color/material_grey</item>
+        <!--<item>@color/material_blue_grey</item>-->
+        <item>@color/material_black</item>
+        <item>@color/material_white</item>
+    </string-array>
+
+    <string-array name="default_color_choice_values_900" translatable="false">
+        <item>@color/material_red_900</item>
+        <item>@color/material_pink_900</item>
+        <item>@color/material_purple_900</item>
+        <item>@color/material_deep_purple_900</item>
+
+        <item>@color/material_indigo_900</item>
+        <item>@color/material_blue_900</item>
+        <item>@color/material_light_blue_900</item>
+        <item>@color/material_cyan_900</item>
+
+        <item>@color/material_teal_900</item>
+        <item>@color/material_green_900</item>
+        <item>@color/material_light_green_900</item>
+        <item>@color/material_lime_900</item>
+
+        <item>@color/material_yellow_900</item>
+        <item>@color/material_amber_900</item>
+        <item>@color/material_orange_900</item>
+        <item>@color/material_deep_orange_900</item>
+
+        <item>@color/material_brown_900</item>
+        <item>@color/material_grey_900</item>
+        <!--<item>@color/material_blue_grey_900</item>-->
+        <item>@color/material_black</item>
+        <item>@color/material_white</item>
+    </string-array>
+</resources>

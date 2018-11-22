@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorPreference">
+        <attr name="android:entryValues"/>
+        <attr name="moreString" format="string"/>
+        <attr name="applyString" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="SpinnerPreference">
+        <attr name="entries" />
+        <attr name="entryValues" />
+    </declare-styleable>
+</resources>

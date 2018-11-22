@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">support-v14-ext</string>
+    <string name="press_color_to_apply">press_color_to_apply</string>
+    <string name="dialog_color_picker">Choose Color</string>
+    <string name="more">More...</string>
+</resources>
