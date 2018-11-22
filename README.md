@@ -128,7 +128,7 @@ MainFragment2_newInstance("11", 11,12,21,"21")
     - Activity.`launchTestActivity`(...,requestCode: Int = -1)
     - Fragment.`launchTestActivity`(...,requestCode: Int = -1)
     - Context.`launchTestActivity`(...)
-    - bindExtra() : argument bind
+    - bindArgument() : argument bind
    
 
 ## Preferences Bindings
