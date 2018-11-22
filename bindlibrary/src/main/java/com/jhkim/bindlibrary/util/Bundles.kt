@@ -61,6 +61,7 @@ infix fun String.bundleTo(value: SparseArray<out Parcelable>) =
     BundlePair { it[this] = value }
 
 //for null
+@Suppress("UNUSED_PARAMETER")
 infix fun String.bundleTo(n: Void?) = BundlePair { it[this] = null }
 
 
@@ -96,6 +97,7 @@ operator fun Bundle.set(key: String, value: Array<out String>) = putStringArray(
 operator fun Bundle.set(key: String, value: Array<out Parcelable>) = putParcelableArray(key, value)
 operator fun Bundle.set(key: String, value: SparseArray<out Parcelable>) = putSparseParcelableArray(key, value)
 //for null
+@Suppress("UNUSED_PARAMETER")
 operator fun Bundle.set(key: String, value: Void?) = putString(key, null)
 
 @Suppress("UNCHECKED_CAST")
