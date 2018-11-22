@@ -40,6 +40,20 @@ class TestActivity : AppCompatActivity() {
 ...
 }
 ```
+```kotlin
+@ArgBuilder
+class MainFragment : Fragment(){
+    @Arg
+    lateinit var stringVar11 : String
+
+    @Arg
+    var intVar11 : Int = 0
+
+    @Arg
+    var intVar12 : Int = 0
+}
+```
+
 **@ArgBuilder**
 
   * Fragment : 아래의 fun을 generate
