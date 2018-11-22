@@ -3,6 +3,9 @@
 
 A collection of useful binding methods for AndroidX
 
+* [Arguments Bindings](#arguments-bindings)
+* [Preferences Bindings](#preferences-bindings)
+
 ## Dependency
 Latest version : [![](https://jitpack.io/v/kimjoohyoung/BindLibrary.svg)](https://jitpack.io/#kimjoohyoung/BindLibrary)
 ```groovy
@@ -12,9 +15,6 @@ dependencies {
 }
 ```
 
-
-* [Arguments Bindings](#arguments-bindings)
-* [Preferences Bindings](#preferences-bindings)
 
 ## Arguments Bindings
 Activity/Fragment Argument Binding with @ArgBuilder, @Arg annotation
@@ -120,14 +120,14 @@ MainFragment2_newInstance("11", 11,12,21,"21")
 **@ArgBuilder**
 
   * Fragment : 아래의 fun을 generate
-    - {Fragment}.Companion.newInstance(...) :  Fragment에 companion이 있을 경우 
-    - {Fragment}_newInstance(...) :  Fragment에 companion이 없을 경우 
+    - `{Fragment}.Companion.newInstance`(...) :  Fragment에 companion이 있을 경우 
+    - `{Fragment}_newInstance`(...) :  Fragment에 companion이 없을 경우 
     - bindArgument() : argument bind
   
   * Activity : 아래의 fun을 generate
-    - Activity.launchTestActivity(...,requestCode: Int = -1)
-    - Fragment.launchTestActivity(...,requestCode: Int = -1)
-    - Context.launchTestActivity(...)
+    - Activity.`launchTestActivity`(...,requestCode: Int = -1)
+    - Fragment.`launchTestActivity`(...,requestCode: Int = -1)
+    - Context.`launchTestActivity`(...)
     - bindExtra() : argument bind
    
 
