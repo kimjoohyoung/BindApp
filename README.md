@@ -22,9 +22,9 @@ class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-        bindExtra()
+        bindArgument()
     }
-...
+    ...
 }
 ```
 
@@ -37,7 +37,7 @@ class TestActivity : AppCompatActivity() {
 
     @Arg
     var arg2 by BindArgument(10)
-...
+    ...
 }
 ```
 ```kotlin
@@ -51,6 +51,13 @@ class MainFragment : Fragment(){
 
     @Arg
     var intVar12 : Int = 0
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+        ...
+        bindArgument()
+    }
 }
 ```
 
