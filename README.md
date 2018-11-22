@@ -68,7 +68,9 @@ class MainFragment : Fragment(){
     - bindExtra() : argument bind
     
 **@Arg**
- 
+    
+    Argument 정의
+    
 **BindArgument**
 
   bindArgument()나 bindExtra()를 사용하지 않아도 자동 bind
