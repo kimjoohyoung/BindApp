@@ -10,8 +10,9 @@ A collection of useful binding methods for AndroidX
 Latest version : [![](https://jitpack.io/v/kimjoohyoung/BindLibrary.svg)](https://jitpack.io/#kimjoohyoung/BindLibrary)
 ```groovy
 dependencies {
-	implementation 'com.github.kimjoohyoung:BindLibrary:0.9'
-	kapt 'com.github.kimjoohyoung:BindProcessor:0.9'
+    implementation 'com.github.kimjoohyoung:BindLibrary:0.952'
+    kapt 'com.github.kimjoohyoung.BindLibrary:BindProcessor:0.952'
+    compileOnly 'com.squareup:kotlinpoet:1.0.0-RC2'
 }
 ```
 
