@@ -1,7 +1,7 @@
 package com.jhkim.bindapp
 
-import com.jhkim.bindlibrary.preference.ext.BindPreference
-import com.jhkim.bindlibrary.preference.ext.SharedPreferenceExt
+import com.jhkim.bindlibrary.preference.BindPreference
+import com.jhkim.bindlibrary.preference.SharedPreferenceExt
 
 object Setting : SharedPreferenceExt() {
     var prefInt by BindPreference(10)
