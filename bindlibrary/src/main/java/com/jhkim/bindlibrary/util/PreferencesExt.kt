@@ -27,10 +27,12 @@ operator fun <T : Enum<T>> SharedPreferences.get(key: String, value: T ) :T {
 }
 operator fun <T> SharedPreferences.get(key: String, value: T) = fromJson(getString(key, null), value)
 
+@Suppress("UNUSED")
 fun <T> SharedPreferences.Editor.toJson(value : T) :String? {
     return Gson().toJson(value)
 }
 
+@Suppress("UNUSED")
 fun <T> SharedPreferences.fromJson(value : String?, default : T) :T {
     return if(value !=null) Gson().fromJson<T>(value, object : TypeToken<T>() {}.type) else default
 }

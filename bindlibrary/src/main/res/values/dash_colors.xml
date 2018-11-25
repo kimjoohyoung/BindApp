@@ -1,6 +1,4 @@
-<resources>
-
-
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string-array name="default_color_choice_values2" translatable="false">
         <item>#4285F4</item>
         <item>#aa66cc</item>
@@ -75,7 +73,7 @@
         <item>@color/material_deep_orange_900</item>
 
         <item>@color/material_brown_900</item>
-        <item>@color/material_grey_900</item>
+        <item tools:ignore="PrivateResource">@color/material_grey_900</item>
         <!--<item>@color/material_blue_grey_900</item>-->
         <item>@color/material_black</item>
         <item>@color/material_white</item>

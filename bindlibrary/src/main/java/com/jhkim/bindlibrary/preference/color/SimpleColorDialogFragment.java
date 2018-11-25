@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import com.jhkim.bindlibrary.R;
 
@@ -20,13 +20,13 @@ public class SimpleColorDialogFragment extends DialogFragment {
     private final static String COLOR="COLOR";
     private final static String COLOR_VALUES_RES_ID="COLOR_VALUES_RES_ID";
     private final static String MORE_RES_ID="MORE_RES_ID";
-    GridView mGridView;
-    Button mButtonMore;
+    private GridView mGridView;
+    private Button mButtonMore;
 
-    int color;
-    String title="색상 선택";
+    private int color;
+    private String title="색상 선택";
 
-    int selectedColorIndex=-1;
+    private int selectedColorIndex=-1;
 
     private Integer[] mColors;
     private ColorPickerDialog.OnColorChangedListener mListener;
@@ -50,7 +50,7 @@ public class SimpleColorDialogFragment extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_color_dialog, container, false);
         mGridView= v.findViewById(R.id.gridView);
         mButtonMore= v.findViewById(R.id.buttonMore);
@@ -78,7 +78,7 @@ public class SimpleColorDialogFragment extends DialogFragment {
         super.onDismiss(dialog);
     }
 
-    void onAfterView(){
+    private void onAfterView(){
         getView().setBackgroundColor(0xC0444444);
         getDialog().setTitle(title);
         //String[] colors = getResources().getStringArray(R.array.default_color_choice_values);
@@ -93,9 +93,10 @@ public class SimpleColorDialogFragment extends DialogFragment {
         colors.recycle();
 
         adapter=new ArrayAdapter<Integer>(getActivity(), 0, mColors){
+            @NonNull
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(int position, View convertView, @NonNull ViewGroup parent) {
                 CircleButton btn= (CircleButton) convertView;
                 if(convertView==null){
                     btn=new CircleButton(getContext());
@@ -103,7 +104,6 @@ public class SimpleColorDialogFragment extends DialogFragment {
                     btn.setLayoutParams(new ViewGroup.LayoutParams(mGridView.getColumnWidth(), mGridView.getColumnWidth()));
                     btn.setClickable(false);
                     btn.setFocusable(false);
-                    convertView=btn;
                 }
                 if(selectedColorIndex==position)
                     btn.setImageResource(R.drawable.ic_action_tick);
@@ -116,13 +116,10 @@ public class SimpleColorDialogFragment extends DialogFragment {
         };
 
         mGridView.setAdapter(adapter);
-        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (mListener != null)
-                    mListener.onColorChanged(adapter.getItem(position));
-                SimpleColorDialogFragment.this.dismiss();
-            }
+        mGridView.setOnItemClickListener((parent, view, position, id) -> {
+            if (mListener != null)
+                mListener.onColorChanged(adapter.getItem(position));
+            SimpleColorDialogFragment.this.dismiss();
         });
         if(selectedColorIndex>=0)
             mGridView.setSelection(selectedColorIndex);

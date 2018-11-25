@@ -37,7 +37,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
-        android:gravity="left"
+        android:gravity="start"
         android:text="@string/press_color_to_apply"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

@@ -2,7 +2,6 @@ package com.jhkim.bindapp
 
 import androidx.fragment.app.Fragment
 import com.jhkim.bindannotation.Arg
-import com.jhkim.bindannotation.ArgBuilder
 
 open class MainFragment : Fragment(){
     @Arg

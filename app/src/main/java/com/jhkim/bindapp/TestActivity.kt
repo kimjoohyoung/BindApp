@@ -1,22 +1,15 @@
 package com.jhkim.bindapp
 
-import com.google.android.material.snackbar.Snackbar
+import android.os.Bundle
+import android.view.*
 import androidx.appcompat.app.AppCompatActivity
-
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import com.google.android.material.snackbar.Snackbar
 import com.jhkim.bindannotation.Arg
 import com.jhkim.bindannotation.ArgBuilder
 import com.jhkim.bindlibrary.arguments.BindArgument
-
 import kotlinx.android.synthetic.main.activity_test.*
 import kotlinx.android.synthetic.main.fragment_test.view.*
 
@@ -112,7 +105,7 @@ class TestActivity : AppCompatActivity() {
         }
 
         companion object {
-            val a=1
+            const val a=1
         }
     }
 }

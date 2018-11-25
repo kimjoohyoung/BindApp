@@ -20,9 +20,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
 import com.jhkim.bindlibrary.R;
 
 @SuppressWarnings("WeakerAccess, unused")
@@ -57,11 +57,7 @@ public class ColorPickerDialog  extends Dialog implements
 	}
 
 	private void setUp(int color) {
-		
-		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		assert inflater != null;
-		View layout = inflater.inflate(R.layout.dialog_color_picker, null);
-
+		View layout = View.inflate(getContext(), R.layout.dialog_color_picker, null);
 		setContentView(layout);
 
 		setTitle(R.string.dialog_color_picker);
@@ -126,6 +122,7 @@ public class ColorPickerDialog  extends Dialog implements
 	}
 	
 	@Override
+	@NonNull
 	public Bundle onSaveInstanceState() {
 		Bundle state = super.onSaveInstanceState();
 		state.putInt("old_color", mOldColor.getColor());
@@ -134,7 +131,7 @@ public class ColorPickerDialog  extends Dialog implements
 	}
 	
 	@Override
-	public void onRestoreInstanceState(Bundle savedInstanceState) {
+	public void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
 		mOldColor.setColor(savedInstanceState.getInt("old_color"));
 		mColorPicker.setColor(savedInstanceState.getInt("new_color"), true);

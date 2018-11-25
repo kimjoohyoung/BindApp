@@ -16,6 +16,7 @@
 
 package com.jhkim.bindlibrary.preference.color;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -561,6 +562,7 @@ public class ColorPickerView extends View {
 		return super.onTrackballEvent(event);
 	}
 
+	@SuppressLint("ClickableViewAccessibility")
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 

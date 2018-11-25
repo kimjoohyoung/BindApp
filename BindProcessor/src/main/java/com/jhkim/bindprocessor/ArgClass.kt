@@ -4,13 +4,8 @@ import com.squareup.kotlinpoet.asTypeName
 import javax.lang.model.element.PackageElement
 import javax.lang.model.element.TypeElement
 
+@Suppress("UNUSED")
 class ArgClass(val classElement : TypeElement, val packElement : PackageElement){
-//    val items = mutableListOf<ArgField>()
-//
-//    fun add(item : ArgField) {
-//        items.add(item)
-//    }
-
     val fileName = "${classElement.simpleName}Extension"
 
     val clsName = classElement.qualifiedName.removePrefix("$packElement.")
