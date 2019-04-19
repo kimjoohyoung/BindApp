@@ -64,7 +64,6 @@ class TestActivity : AppCompatActivity() {
 }
 ```
 For Example(Fragment) : 
-```
 ```kotlin
 @ArgBuilder
 class MainFragment : Fragment(){
