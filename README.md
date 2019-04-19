@@ -62,6 +62,7 @@ class TestActivity : AppCompatActivity() {
     var arg2 by BindArgument(10)
     ...
 }
+```
 For Example(Fragment) : 
 ```
 ```kotlin
